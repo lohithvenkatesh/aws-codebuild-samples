@@ -14,6 +14,9 @@ hooks:
   BeforeInstall:
     - location: deploy_scripts/install.sh
       runas: ec2-user
+      ApplicationStop:
+    - location: deploy_scripts/stop.sh
+      runas: ec2-user
   ApplicationStart:
     - location: deploy_scripts/start.sh
       runas: ec2-user
